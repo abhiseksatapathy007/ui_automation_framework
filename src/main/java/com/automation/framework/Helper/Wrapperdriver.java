@@ -1069,7 +1069,7 @@ public class Wrapperdriver {
 				String dataField = cell.getAttribute("data-field");
 				if (dataField != null) {
 					dataField = dataField.trim();
-					String value = cell.getText().trim();
+				String value = cell.getText().trim();
 
 					if (fieldMapping != null && fieldMapping.containsKey(dataField)) {
 						map.put(fieldMapping.get(dataField), value);
@@ -1092,7 +1092,7 @@ public class Wrapperdriver {
 		for (WebElement header : allHeaders) {
 			Thread.sleep(1000);
 			String headerText = header.getText();
-			
+
 			if (excludeText == null || !headerText.contains(excludeText)) {
 				int index = headerText.indexOf(":");
 
@@ -1176,7 +1176,7 @@ public class Wrapperdriver {
 		Thread.sleep(1000);
 		waitForElementToBePresent(by, 10);
 		WebElement ele = Wrapperdriver.findElement(by);
-		String classAttr = ele.getAttribute("class");
+			String classAttr = ele.getAttribute("class");
 		
 		boolean isSelected = classAttr.contains("on") || classAttr.contains("selected") || classAttr.contains("active");
 		
@@ -1201,7 +1201,7 @@ public class Wrapperdriver {
 		if (shouldBeSelected && !isSelected) {
 			ele.click();
 		} else if (!shouldBeSelected && isSelected) {
-			ele.click();
+				ele.click();
 		}
 	}
 
